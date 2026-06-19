@@ -1,0 +1,15 @@
+---
+# Inventory: dev
+# Replace with actual IPs or use dynamic inventory (aws_ec2 plugin)
+
+[webservers]
+# web1 ansible_host=10.0.1.10
+# web2 ansible_host=10.0.1.11
+
+[dbservers]
+# db1 ansible_host=10.0.2.10
+
+[all:vars]
+ansible_user=deploy
+ansible_ssh_private_key_file=~/.ssh/aws-lab-dev.pem
+ansible_python_interpreter=/usr/bin/python3

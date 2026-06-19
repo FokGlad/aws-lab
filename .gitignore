@@ -1,0 +1,27 @@
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+.terraform.lock.hcl
+.terraformrc
+terraform.rc
+
+# Ansible
+*.retry
+ansible/*.log
+
+# AWS
+*.pem
+*.key
+.aws/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# OS
+.DS_Store
+Thumbs.db

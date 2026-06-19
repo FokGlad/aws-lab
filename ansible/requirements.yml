@@ -1,0 +1,5 @@
+# ──────────────────────────────────────────────
+# Ansible Galaxy Requirements (optional)
+# ──────────────────────────────────────────────
+# nginxinc.nginx
+# geerlingguy.firewall

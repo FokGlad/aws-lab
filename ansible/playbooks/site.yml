@@ -1,0 +1,22 @@
+---
+# Playbook: site.yml
+# Full provisioning: common → nginx → app → monitoring
+
+- name: Apply common configuration to all hosts
+  hosts: all
+  become: true
+  roles:
+    - common
+
+- name: Configure webservers
+  hosts: webservers
+  become: true
+  roles:
+    - nginx
+    - app
+
+- name: Setup monitoring
+  hosts: all
+  become: true
+  roles:
+    - monitoring

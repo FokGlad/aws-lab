@@ -1,0 +1,29 @@
+---
+# Playbook: deploy.yml
+# Rolling application deployment
+
+- name: Deploy application
+  hosts: webservers
+  become: true
+  serial: 1
+  max_fail_percentage: 0
+
+  pre_tasks:
+    - name: Remove instance from ALB target group
+      ansible.builtin.debug:
+        msg: "TODO: deregister from target group"
+
+  roles:
+    - app
+
+  post_tasks:
+    - name: Health check
+      ansible.builtin.uri:
+        url: "http://localhost:8080/health"
+        status_code: 200
+      retries: 5
+      delay: 10
+
+    - name: Re-register instance in ALB target group
+      ansible.builtin.debug:
+        msg: "TODO: re-register in target group"
