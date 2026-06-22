@@ -1,6 +1,6 @@
 # AWS Lab — Infrastructure as Code
 
-> Multi-environment AWS infrastructure provisioned with Terraform, configured with Ansible, documented like a pro.
+> Multi-environment AWS infrastructure provisioned with Terraform, configured with Ansible.
 
 ## Structure
 
@@ -13,7 +13,7 @@ aws-lab/
 │   ├── roles/          # common, nginx, app, monitoring
 │   ├── inventories/    # Per-environment host files
 │   └── playbooks/      # Site, app deploy, monitoring setup
-├── docs/               # The why, not just the what
+├── docs/               # Documentation
 │   ├── architecture/   # System design docs
 │   ├── runbooks/       # Incident response, ops procedures
 │   └── adr/            # Architecture Decision Records
@@ -37,9 +37,9 @@ aws-lab/
 
 | Env | AWS Account | Region | Purpose |
 |-----|-------------|--------|---------|
-| dev | sandbox | eu-west-1 | Experimentation, destroy freely |
-| staging | staging | eu-west-1 | Pre-prod validation |
-| prod | production | eu-west-1 | Real workloads |
+| dev | sandbox | eu-west-3 | Experimentation, destroy freely |
+| staging | staging | eu-west-3 | Pre-prod validation |
+| prod | production | eu-west-3 | Real workloads |
 
 ## Getting Started
 
